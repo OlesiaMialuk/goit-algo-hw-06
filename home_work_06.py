@@ -2,7 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import heapq
 
-# Завдання 1: Створення графа та аналіз основних характеристик
+#Створення графа та аналіз основних характеристик
 web_graph = {
     "google.com": {"facebook.com", "youtube.com"},
     "facebook.com": {"google.com", "youtube.com", "amazon.com"},
@@ -25,7 +25,7 @@ print("Кількість вузлів:", G.number_of_nodes())
 print("Кількість ребер:", G.number_of_edges())
 print("Ступінь центральності:", nx.degree_centrality(G))
 
-# Завдання 2: DFS та BFS для знаходження шляхів
+#DFS та BFS для знаходження шляхів
 def dfs_paths(graph, start, end, path=[]):
     path = path + [start]
     if start == end:
@@ -56,7 +56,7 @@ bfs_paths = list(bfs_paths(web_graph, "google.com", "twitter.com"))
 print("DFS шляхи:", dfs_paths)
 print("BFS шляхи:", bfs_paths)
 
-# Завдання 3: Алгоритм Дейкстри для знаходження найкоротшого шляху
+# Алгоритм Дейкстри для знаходження найкоротшого шляху
 def dijkstra(graph, start):
     shortest_paths = {node: float('inf') for node in graph}
     shortest_paths[start] = 0
